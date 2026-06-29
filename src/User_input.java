@@ -55,7 +55,7 @@ public class User_input {
 
         System.out.print("Enter your age: ");
         int age = text.nextInt();
-        text.nextLine(); // using nextInt(); before nextLine(); causing issue the the next input questions wont appear
+        text.nextLine(); // using nextInt(); before nextLine(); causing issue the next input questions wont appear
 
         System.out.print("Enter your favourite color: ");
         String color = text.nextLine();
@@ -65,9 +65,10 @@ public class User_input {
 
         text.close();// (name of the object - from Scanner text = new Scanner(System.in);) .close()
         // end of using scanner
+        // always practice closing your scanner or else a problem might cause
 
 
-         #*/
+        #*/
 
 
 
