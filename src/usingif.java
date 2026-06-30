@@ -2,8 +2,13 @@ import java.util.Scanner;
 
 public class usingif {
     public static void main(String[] args) {
-        Scanner ifelse = new Scanner(System.in);
 
+        // Note: In an if-else-if-else ladder, conditions are checked from top to bottom.
+        // The first TRUE condition will execute, and the rest will be ignored.
+        // So always prioritize the most important condition first,
+        // followed by else if, and finally else as the default case.
+
+        Scanner ifelse = new Scanner(System.in);
 
         int age;
         String name;
@@ -60,6 +65,11 @@ public class usingif {
             System.out.println("Your NOT a student! 🙍");
         }
         ifelse.close();
+
+        // Note: In an if-else-if-else ladder, conditions are checked from top to bottom.
+        // The first TRUE condition will execute, and the rest will be ignored.
+        // So always prioritize the most important condition first,
+        // followed by else if, and finally else as the default case.
     }
 }
 
