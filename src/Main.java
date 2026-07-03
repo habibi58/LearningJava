@@ -112,6 +112,9 @@ public class Main {
         System.out.println("Your choice is a " + color + " " + year + " " + car);
         System.out.println("The price is: " + currency + price);
 
+        // if you want to multiple number you can use it without the double quote
+        System.out.println(15 + 5);
+
         if (forSale) {
             System.out.println("There is a " + car + " for sale");
         } else {
