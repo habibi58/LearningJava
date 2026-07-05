@@ -17,10 +17,11 @@ public class guessgame {
         // must add +1 because the second number is exclusive means 100 is equal to 99
         System.out.println(randomNumber); // print the random number
 
+        //  just the headline not in the loop
         System.out.println("Number Guessing game");
         System.out.printf("Guess a number between %d-%d: ", min, max);
 
-        do {
+        do { // do means enter the loop
 
             System.out.print("Enter a guess: ");
             guess = scanner.nextInt();

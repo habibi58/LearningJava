@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class loopsz {
-    public static void main(String[]args){
+    public static void main(String[]args) throws InterruptedException { //throws InterruptedException for implementing Thread.sleep()
 
         // for loop = execute some code a certain amount of times
 
@@ -47,7 +47,9 @@ public class loopsz {
 
         // example 2
 
+
         Scanner scan = new Scanner(System.in);
+        /*#
         // Ask the user how many times the loop should run
         System.out.print("Enter how many you want to loop: ");
         int num = scan.nextInt();
@@ -60,6 +62,20 @@ public class loopsz {
             // Print the current value of the loop counter
             System.out.println(i);
         }
+
+        # */
+        // we'll need this before the sleep countdown start
+        // public static void main(String[]args) throws InterruptedException { //throws InterruptedException for implementing Thread.sleep()
+
+        System.out.print("How many seconds to count down from: ");
+        int start = scan.nextInt();
+
+        for (int i = start; i > 0 ;i--){
+            System.out.println(i);
+            Thread.sleep(1000); // used to wait for amount for millisecond before printing again
+            // 1000 millisecond is equal to 1 second
+        }
+        System.out.println("Happy new year!");
         scan.close();
 
 

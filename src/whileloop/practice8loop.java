@@ -1,3 +1,5 @@
+package whileloop;
+
 public class practice8loop {
     public static void main(String[] args){
 

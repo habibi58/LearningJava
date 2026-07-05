@@ -1,3 +1,5 @@
+package whileloop;
+
 import java.util.Scanner;
 
 public class practice9loop{
