@@ -30,7 +30,11 @@ public class bank {
             switch(choice){
                 case 1 -> showbalance(balance);
                 case 2 -> balance += deposit();
+                // adds whatever deposit() returns to balance.
+                // if deposit() returns 0 (invalid input), balance += 0 changes nothing
                 case 3 -> balance -= withdraw(balance);
+                // subtracts whatever withdraw() returns from balance.
+                // if withdraw() returns 0 (invalid input), balance -= 0 changes nothing
                 case 4 ->{
                     isRunning = false;
                     System.out.println("Thank you for using the Banking Program!");
@@ -39,15 +43,6 @@ public class bank {
 
             }
         }
-
-        // showBalance()
-
-        // Deposit()
-
-        // withdraw()
-
-        // EXIT MESSAGE
-
         scan.close();
 
     }
@@ -64,9 +59,16 @@ public class bank {
         if(amount < 0){
             System.out.println("Amount cannot be less than 0");
             return 0;
+            // return 0 on purpose here: this is NOT "no value",
+            // it's a deliberate signal meaning "invalid, don't change balance".
+            // since deposit() must return a double (a primitive, never null),
+            // 0 is chosen because balance += 0 has no effect
         }
         else {
             return amount;
+            // valid case: return the actual amount entered
+            // so main() can add it to balance
+            // this mean it'll get the value of amount
         }
     }
     static double withdraw(double balance){
@@ -79,14 +81,21 @@ public class bank {
             System.out.println("You do not have sufficient balance to make this withdrawal.");
             System.out.println("Your total balance is ₱" + balance);
             return 0;
+            // return 0 here too: not enough balance to withdraw,
+            // so we return 0 instead of the entered amount
+            // to make sure balance -= 0 leaves balance unchanged
         }
         else if(amount < 0){
             System.out.println("Amount can't be negative");
             return 0;
+            // same idea: negative withdrawal is invalid,
+            // return 0 so balance -= 0 does nothing
         }
         else{
             System.out.printf("You have successfully withdraw an amount of: ₱%.2f\n", amount);
             return amount;
+            // valid case: return the actual amount
+            // so main() can subtract it from balance
         }
     }
 }
