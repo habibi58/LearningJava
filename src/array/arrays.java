@@ -23,15 +23,15 @@ public class arrays {
         // Reads: "for each String in fruits, call it 'fruit', do the following"
         // No index needed — Java walks through the array automatically,
         // one element at a time, from index 0 to the last index.
-
-
-        //# Arrays.sort(fruits); // it will sort your values in alphabetical order
-        //# Arrays.fill(fruits,  "Pineapple"); // will fill your array of value with banana
-
         for (String fruit : fruits) {
             // "fruit" holds the current element for this pass:
             // apple, then orange, then banana, then coconut
             System.out.print(fruit + " ");
+
+        //# Arrays.sort(fruits); // it will sort your values in alphabetical order
+        //# Arrays.fill(fruits,  "Pineapple"); // will fill your array of value with banana
+
+
         }
     }
 }
